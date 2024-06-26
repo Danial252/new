@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #87CEEB, #f0f8ff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background: skyblue;
+      font-size: 30px;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #0056b3;
+      text-align: center;
+    }
+    .reading {
+      font-size: 18px;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .label {
+      font-size: 16px;
+      font-weight: bold;
+      background: #87CEEB;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class='header'>
+    <div class='header'>UCP Global Climate Monitoring Station</div>
+  </div>
+  <div class='container'>
+    <div class='card'>
+      <div class='title'>Temperature</div>
+      <div class='reading'><span class='label'>DHT Sensor</span> <span id='temperature'>-</span>&degC</div>
+      <canvas id='tempChart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>Humidity</div>
+      <div class='reading'><span class='label'>DHT Sensor</span> <span id='humidity'>-</span> %RH</div>
+      <canvas id='humChart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>Pressure</div>
+      <div class='reading'><span class='label'>BMP280</span> <span id='pressure'>-</span> hPa</div>
+      <canvas id='pressureChart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>Altitude</div>
+      <div class='reading'><span class='label'>BMP280</span> <span id='altitude'>-</span> m</div>
+      <canvas id='altitudeChart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>CO Concentration</div>
+      <div class='reading'><span class='label'>MICS6814</span> <span id='co'>-</span> ppm</div>
+      <canvas id='coChart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>NH3 Concentration</div>
+      <div class='reading'><span class='label'>MICS6814</span> <span id='nh3'>-</span> ppm</div>
+      <canvas id='nh3Chart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>NO2 Concentration</div>
+      <div class='reading'><span class='label'>MICS6814</span> <span id='no2'>-</span> ppm</div>
+      <canvas id='no2Chart'></canvas>
+    </div>
+
+    <div class='card'>
+      <div class='title'>AQI</div>
+      <div class='reading'><span id='aqi'>-</span></div>
+    </div>
+
+    <div class='card'>
+      <div class='title'>Air Quality</div>
+      <div class='reading'><span id='airQuality'>-</span></div>
+    </div>
+
+    <div class='card'>
+      <div class='title'>Wind Direction</div>
+      <div class='reading'><span id='windDirection'>-</span></div>
+    </div>
+  </div>
+  <script>
+    // JavaScript code to fetch and display data from the server would go here
+  </script>
+</body>
+</html>
